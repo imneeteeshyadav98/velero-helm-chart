@@ -384,22 +384,6 @@ restic:
 #       - foo
 #schedules: {}
 
-
-schedules:
-  velerobackup:
-    disabled: false
-    labels:
-      myenv: veleronamespace
-    annotations:
-      myenv: veleronamespace
-    schedule: " 35 10 * * * "
-    useOwnerReferencesInBackup: true
-    template:
-      ttl: "240h"
-      includedNamespaces:
-      - linuxnamespace
-
-
 # Velero ConfigMaps.
 # Eg:
 # configMaps:
